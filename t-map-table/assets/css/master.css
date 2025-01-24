@@ -1,0 +1,221 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html ,body{
+    height: 100%;
+    background-color: var(--x--bg);
+}
+
+:root{
+    --x--bg:#16404D;
+    --x--Hover:#DDA853;
+    --x--txt:#FBF5DD;
+    --x--primary:#A6CDC6;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--x--primary);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.container .row{
+    width: 100%;
+}
+
+.container .row .col-md-6 .row{
+    overflow-y: auto;
+    max-height: 400px;
+    margin-left: 10px;
+}
+
+/* ---------------------------------------table---------------------------------------------- */
+
+table{
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--x--primary);
+    border-radius: 10px;
+    color: var(--x--txt);
+}
+
+thead{
+    position: sticky;
+    top: 0;
+    border: 3px solid var(--x--primary);
+}
+
+thead tr{
+    border-radius: 10px;
+    border: 3px solid var(--x--primary);
+}
+
+thead .deleteAllBtn{
+   background:none;
+   font-size: 13px; 
+   width: 100%;
+   border: 0.5px solid var(--x--primary);
+   background-color: var(--x--bg);
+}
+
+thead .deleteAllBtn:hover{
+    background-color: var(--x--Hover);
+    color: var(--x--bg);
+}
+
+thead .AddRowBtn{
+    background:none;
+    font-size: 13px; 
+    width: 100%;
+    border:0.5px solid var(--x--primary);
+    background-color: var(--x--bg);
+}
+
+thead .AddRowBtn:hover{
+    background-color: var(--x--Hover);
+    color: var(--x--bg);
+}
+
+thead th{
+    height: 50px;
+    background-color: var(--x--primary);
+    font-size: 14px;
+    text-align: center;
+    border: 3px solid var(--x--primary);
+    color: var(--x--bg);
+    z-index: 1;
+}
+
+tr td{
+ padding: 8px;
+  text-align: center;
+  border: 1px solid var(--x--primary);
+}
+
+tbody button{
+    width: 10px;
+}
+
+tbody button i{
+    color: var(--x--txt);
+}
+
+tbody button i:hover{
+    color: var(--x--Hover);
+}
+
+tbody tr .latInput,.lngInput{
+    background: none;
+    width: 70%;
+    text-align: center;
+}
+
+#emptyMessage{
+    color:var(--x--txt);
+    margin-top: 2rem;
+}
+
+/* -----------------------------------------------modal----------------------------------------------- */
+
+.modal .modal-dialog .modal-content{
+    background-color: var(--x--bg);
+    text-align: center;
+    font-weight: bold;
+    align-items: center;
+}
+
+.modal .modal-dialog .modal-content .modal-header{
+    color:var(--x--txt);
+}
+
+.modal .modal-dialog .modal-content .modal-body{
+    width: 100%;
+}
+
+.modal .modal-dialog .modal-content .modal-body .form-group{
+    text-align: center;
+    color:var(--x--txt);
+    width:100%;
+}
+
+.modal .modal-dialog .modal-content .modal-body .form-group .form-control{
+    text-align: center;
+    width:100%;
+    background-color: var(--x--primary);
+    color: var(--x--bg);
+}
+
+.modal-footer{
+    width: 100%;
+}
+
+.modal-footer .editBtns{
+    width: 100%;
+}
+
+.modal-footer .editBtns button{
+    background-color: var(--x--Hover);
+    color: var(--x--bg);
+    width: 50%;
+}
+
+.modal-footer .editBtns button:hover{
+    color: var(--x--bg);
+    background-color: var(--x--txt);
+    color: var(--x--Hover);
+    border:1px solid rgba(255, 0, 0, 0.304);
+}
+
+.modal-footer .resetBtn{
+    width: 100%;
+}
+
+.modal-footer .resetBtn button{
+    background-color: var(--x--txt);
+    color: var(--x--bg);
+    width: 50%;
+}
+
+.modal-footer .resetBtn button:hover{
+    color: var(--x--bg);
+    background-color: rgba(255, 0, 0, 0.338);
+    color: var(--x--txt);
+    border:1px solid rgba(255, 0, 0, 0.304);
+}
+
+/* ------------------------------------------map------------------------------------------ */
+
+#myMap{
+    width: 700px;
+    height: 500px;
+    border-radius: 20px;
+    border: 5px solid var(--x--primary);
+}
+
+.leaflet-popup-content-wrapper{
+    background-color: #16404dc1;
+    border: 3px solid var(--x--bg);
+    color: #A6CDC6;
+}
+
+.leaflet-popup-tip{
+    background-color: #16404dc1;
+    border: 3px solid var(--x--bg);
+    color: #A6CDC6;
+}
+
+
+
+
+
+ 

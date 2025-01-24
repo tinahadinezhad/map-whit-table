@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+    <link rel="stylesheet" href="./assets/vendor/fontawsome/css/all.min.css">
+    <link rel="stylesheet" href="./assets/vendor/leaftlet/leaflet.css">
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./assets/css/master.css">
+</head>
+<body>
+    
+    <div class="container d-flex align-items-center justify-content-center">
+        <div class="row">
+            <h1>با هر بار کلیک روی نقشه مختصات مربوطه در جدول نمایش داده می شود</h1>
+            <div class="col-md-6">
+                <div class="map d-flex justify-content-center align-items-center">
+                    <div id="myMap"></div>
+                </div>
+            </div>
+
+            <div class="col-md-6"> 
+                <div class="row">
+                    <table id="coordinatesTable" >
+                        <thead>
+                            <tr>
+                                <th colspan="2"> 
+                                    <button id="addRowBtn" class="btn btn-primary AddRowBtn">
+                                        اضافه کردن سطر
+                                    <i class="fas fa-plus"></i> 
+                                    </button>
+                                </th>
+                                <th colspan="2">
+                                    <button id="deleteAllBtn" class="btn btn-danger deleteAllBtn"> خالی کردن جدول</button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>عملیات</th>
+                                <th>عرض جغرافیایی</th>
+                                <th>طول جغرافیایی</th>
+                                <th>
+                                    <div class="selectAllBtn">
+                                            <label for="selectAll">انتخاب همه</label>
+                                            <input type="checkbox" id="selectAll" name="selectAll"></th>
+                                     </div>     
+                            </tr>
+                        </thead>
+                    </table>
+                    <div id="emptyMessage" style="display: none; text-align: center;">
+                        <i class="fas fa-box" style="font-size: 40px;"></i>
+                        <p>جدول خالی است</p>
+                    </div>                    
+                </div>
+            </div>
+
+            
+            <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="editModalLabel">ویرایش مختصات</h5>
+                        </div>
+
+                        <div class="modal-body">
+                            <form id="editForm">
+
+                            <div class="form-group mb-2">
+                                 <label for="latInput" class="mb-1">عرض جغرافیایی</label>
+                                 <input type="text" class="form-control" id="latInput" required>
+                            </div>
+
+                            <div class="form-group mb-2">
+                                 <label for="lngInput" class="mb-1">طول جغرافیایی</label>
+                                <input type="text" class="form-control" id="lngInput" required>
+                            </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <div class="editBtns d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                                <button type="button" class="btn btn-primary" id="saveChangesBtn">ذخیره تغییرات</button>
+                            </div>
+
+                            <div class="resetBtn d-flex justify-content-center">
+                                <button id="resetInitialBtn" class="btn btn-secondary">برگشت به حالت اولیه</button>
+                                <button id="resetFormBtn" class="btn btn-danger">پاک کردن فرم</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+        </div>
+    </div>
+
+ 
+    <script src="./assets/vendor/jquery/jquery-3.7.1.min.js"></script>
+    <script src="./assets/vendor/leaftlet/leaflet.js"></script>
+    <script src="./assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendor/aalert/sweetalert2@11.7.1.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
